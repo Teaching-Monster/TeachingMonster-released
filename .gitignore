@@ -1,0 +1,12 @@
+config/.env
+*venv/
+output/
+tmp/
+__pycache__/
+*/__pycache__/
+*.pytest_cache
+*.ruff_cache
+*/.DS_Store
+math_cache/
+.DS_Store
+src/outline/history.txt

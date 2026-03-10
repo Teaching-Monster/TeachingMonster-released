@@ -1,0 +1,27 @@
+service:
+  name: teaching_monster_baseline
+  version: "0.1.0"
+  description: "The baseline for teaching monster contest"
+
+logging:
+  level: INFO
+  format: "[%(asctime)s] %(levelname)s %(message)s"
+
+llm:
+  provider: gemini
+  default_model: gemini-3-flash-preview
+  default_temperature: 0.7
+  default_max_tokens: 8192
+
+pipeline:
+  slides_type: PPT
+
+ppt:
+  max_retries: 5
+  retry_base_delay: 2.0
+  max_review_rounds: 5
+  review_threshold: 9.0
+
+output:
+  tmp_dir: ./tmp/
+  final_video_dir: ./output
