@@ -33,7 +33,20 @@
                     "properties": {
                       "video_url": { "type": "string" },
                       "subtitle_url": { "type": "string" },
-                      "supplementary_url": { "type": "string" }
+                      "supplementary_url": {
+                          "nullable": true,
+                          "oneOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          ]
+                        }
                     }
                   }
                 }
